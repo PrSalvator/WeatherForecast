@@ -1,4 +1,4 @@
-import { Header } from "@/widgets/Header/ui";
+import { Header } from "@/widgets/Header";
 
 const Main = () => {
   // if (navigator.geolocation) {
