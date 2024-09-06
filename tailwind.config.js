@@ -3,9 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        "arimo": ["Arimo", "sans-serif"],
-      },
+      colors: {
+        "blue": "#0664a2"
+      }
     },
   },
   plugins: [],
