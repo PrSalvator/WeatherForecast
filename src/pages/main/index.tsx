@@ -1,7 +1,5 @@
-import { WEATHER_CODES } from "@/features/weather_codes_map";
-import { useImage } from "@/shared/hooks/useImage";
 import { Header } from "@/widgets/Header";
-
+import { RecentLocations } from "@/widgets/recent_locations";
 const Main = () => {
   // if (navigator.geolocation) {
   //   navigator.geolocation.getCurrentPosition((pos) => {
@@ -11,17 +9,17 @@ const Main = () => {
   // } else {
   //   console.log("Геолокация выключена на компьютере");
   // }
-  const codes = [];
-  for (let code of WEATHER_CODES.values()) {
-    codes.push(code);
-  }
+
   return (
-    <div>
-      <Header />
-      <section className="max-w-5xl mx-auto">
-        <p>Ндавние места</p>
-        <div>
-        </div>
+    <div className="bg-gray min-h-screen flex flex-col items-stretch items-center">
+      <section
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+        className="bg-cover bg-no-repeat bg-center"
+      >
+        <Header />
+        <section className="md:max-w-5xl w-full px-3 mx-auto">
+          <RecentLocations />
+        </section>
       </section>
     </div>
   );

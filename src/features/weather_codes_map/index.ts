@@ -1,229 +1,88 @@
-import { IWeatherCodesMapItem } from "@/entities/weather/models";
-import { EImages } from "@/shared/enum/images";
+import { EWeatherCodes } from "@/shared/enum/images";
 
-export const WEATHER_CODES = new Map<number, IWeatherCodesMapItem>([
+export const WEATHER_CODES = new Map<EWeatherCodes, string>([
   [
-    0,
-    {
-      name: "Ясно",
-      day_img: EImages.CLEAR_DAY,
-      night_img: EImages.CLEAR_NIGHT,
-    },
+    EWeatherCodes.CLEAR, "Ясно"
   ],
   [
-    1,
-    {
-      name: "Преимущественно ясно",
-      day_img: EImages.MAINLY_CLEAR_DAY,
-      night_img: EImages.MAINLY_CLEAR_NIGHT,
-    },
+    EWeatherCodes.MAINLY_CLEAR, "Преимущественно ясно"
   ],
   [
-    2,
-    {
-      name: "Переменная облачность",
-      day_img: EImages.PARTLY_CLOUDY_DAY,
-      night_img: EImages.PARTLY_CLOUDY_NIGHT,
-    },
+    EWeatherCodes.PARTLY_CLOUDY, "Переменная облачность",
   ],
   [
-    3,
-    {
-      name: "Пасмурно",
-      day_img: EImages.OVERCAST_DAY,
-      night_img: EImages.OVERCAST_NIGHT,
-    },
+    EWeatherCodes.OVERCAST, "Пасмурно"
   ],
   [
-    45,
-    {
-      name: "Туман",
-      day_img: EImages.FOG_DAY,
-      night_img: EImages.FOG_NIGHT,
-    },
+    EWeatherCodes.FOG, "Туман"
   ],
   [
-    48,
-    {
-      name: "Инейный туман",
-      day_img: EImages.DEPOSTING_RIME_FOG_DAY,
-      night_img: EImages.DEPOSTING_RIME_FOG_NIGHT,
-    },
+    EWeatherCodes.DEPOSTING_RIME_FOG,"Инейный туман"
   ],
   [
-    51,
-    {
-      name: "Небольшая морось",
-      day_img: EImages.LIGHT_DRIZZLE_DAY,
-      night_img: EImages.LIGHT_DRIZZLE_NIGHT,
-    },
+    EWeatherCodes.LIGHT_DRIZZLE, "Небольшая морось"
   ],
   [
-    53,
-    {
-      name: "Морось",
-      day_img: EImages.MODERATE_DRIZZLE_DAY,
-      night_img: EImages.MODERATE_DRIZZLE_NIGHT,
-    },
+    EWeatherCodes.MODERATE_DRIZZLE, "Морось"
   ],
   [
-    55,
-    {
-      name: "Сильная морось",
-      day_img: EImages.DENSE_INTENSITY_DRIZZLE_DAY,
-      night_img: EImages.DENSE_INTENSITY_DRIZZLE_NIGHT,
-    },
+    EWeatherCodes.DENSE_INTENSITY_DRIZZLE, "Сильная морось"
   ],
   [
-    56,
-    {
-      name: "Небольшая изморось",
-      day_img: EImages.LIGHT_FREEZING_DRIZZLE_DAY,
-      night_img: EImages.LIGHT_FREEZING_DRIZZLE_NIGHT,
-    },
+    EWeatherCodes.LIGHT_FREEZING_DRIZZLE, "Небольшая изморось"
   ],
   [
-    57,
-    {
-      name: "Изморось",
-      day_img: EImages.HEAVY_INTENSITY_FREEZING_DRIZZLE_DAY,
-      night_img: EImages.HEAVY_INTENSITY_FREEZING_DRIZZLE_NIGHT,
-    },
+    EWeatherCodes.HEAVY_INTENSITY_FREEZING_DRIZZLE, "Изморось"
   ],
   [
-    61,
-    {
-      name: "Небольшой дождь",
-      day_img: EImages.SLIGHT_RAIN_DAY,
-      night_img: EImages.SLIGHT_RAIN_NIGHT,
-    },
+    EWeatherCodes.SLIGHT_RAIN, "Небольшой дождь"
   ],
   [
-    63,
-    {
-      name: "Дождь",
-      day_img: EImages.MODERATE_RAIN_DAY,
-      night_img: EImages.MODERATE_RAIN_NIGHT,
-    },
+    EWeatherCodes.MODERATE_RAIN, "Дождь"
   ],
   [
-    65,
-    {
-      name: "Сильный дождь",
-      day_img: EImages.HEAVY_INTENSITY_RAIN_DAY,
-      night_img: EImages.HEAVY_INTENSITYE_RAIN_NIGHT,
-    },
+    EWeatherCodes.HEAVY_INTENSITY_RAIN, "Сильный дождь"
   ],
   [
-    66,
-    {
-      name: "Небольшой ледяной дождь",
-      day_img: EImages.LIGHT_FREEZING_RAIN_DAY,
-      night_img: EImages.LIGHT_FREEZING_RAIN_NIGHT,
-    },
+    EWeatherCodes.LIGHT_FREEZING_RAIN, "Небольшой ледяной дождь"
   ],
   [
-    67,
-    {
-      name: "Ледяной дождь",
-      day_img: EImages.HEAVY_INTENSITYE_FREEZING_RAIN_DAY,
-      night_img: EImages.HEAVY_INTENSITYE_FREEZING_RAIN_NIGHT,
-    },
+    EWeatherCodes.HEAVY_INTENSITYE_FREEZING_RAIN, "Ледяной дождь"
   ],
   [
-    71,
-    {
-      name: "Небольшой снегопад",
-      day_img: EImages.SLIGHT_SNOW_FALL_DAY,
-      night_img: EImages.SLIGHT_SNOW_FALL_NIGHT,
-    },
+    EWeatherCodes.SLIGHT_SNOW_FALL, "Небольшой снегопад"
   ],
   [
-    73,
-    {
-      name: "Снегопад",
-      day_img: EImages.MODERATE_SNOW_FALL_DAY,
-      night_img: EImages.MODERATE_SNOW_FALL_NIGHT,
-    },
+    EWeatherCodes.MODERATE_SNOW_FALL, "Снегопад"
   ],
   [
-    75,
-    {
-      name: "Сильный снегопад",
-      day_img: EImages.HEAVY_INTENSITY_SNOW_FALL_DAY,
-      night_img: EImages.HEAVY_INTENSITY_SNOW_FALL_NIGHT,
-    },
+    EWeatherCodes.HEAVY_INTENSITY_SNOW_FALL, "Сильный снегопад"
   ],
   [
-    77,
-    {
-      name: "Мелкий снег",
-      day_img: EImages.SNOW_GRAINS_DAY,
-      night_img: EImages.SNOW_GRAINS_NIGHT,
-    },
+    EWeatherCodes.SNOW_GRAINS, "Мелкий снег"
   ],
   [
-    80,
-    {
-      name: "Небольшой ливень",
-      day_img: EImages.SLIGHT_RAIN_SHOWERS_DAY,
-      night_img: EImages.SLIGHT_RAIN_SHOWERS_NIGHT,
-    },
+    EWeatherCodes.SLIGHT_RAIN_SHOWERS, "Небольшой ливень"
   ],
   [
-    81,
-    {
-      name: "Ливень",
-      day_img: EImages.MODERATE_RAIN_SHOWERS_DAY,
-      night_img: EImages.MODERATE_RAIN_SHOWERS_NIGHT,
-    },
+    EWeatherCodes.MODERATE_RAIN_SHOWERS, "Ливень"
   ],
   [
-    82,
-    {
-      name: "Сильный ливень",
-      day_img: EImages.VIOLENT_SHOWERS_RAIN_DAY,
-      night_img: EImages.VIOLENT_SHOWERS_RAIN_NIGHT,
-    },
+    EWeatherCodes.VIOLENT_SHOWERS_RAIN, "Сильный ливень"
   ],
   [
-    85,
-    {
-      name: "Небольшой снежный ливень",
-      day_img: EImages.SLIGHT_SNOW_SHOWERS_DAY,
-      night_img: EImages.SLIGHT_SNOW_SHOWERS_NIGHT,
-    },
+    EWeatherCodes.SLIGHT_SNOW_SHOWERS, "Небольшой снежный ливень"
   ],
   [
-    86,
-    {
-      name: "Снежный ливень",
-      day_img: EImages.HEAVY_SNOW_SHOWERS_DAY,
-      night_img: EImages.HEAVY_SNOW_SHOWERS_NIGHT,
-    },
+    EWeatherCodes.SLIGHT_SNOW_SHOWERS, "Снежный ливень"
   ],
   [
-    95,
-    {
-      name: "Гроза",
-      day_img: EImages.THUNDERSTORM_DAY,
-      night_img: EImages.THUNDERSTORM_NIGHT,
-    },
+    EWeatherCodes.THUNDERSTORM, "Гроза"
   ],
   [
-    96,
-    {
-      name: "Гроза с небольшим градом",
-      day_img: EImages.THUNDERSTORM_WITH_SLIGHT_HAIL_DAY,
-      night_img: EImages.THUNDERSTORM_WITH_SLIGHT_HAIL_NIGHT,
-    },
+    EWeatherCodes.THUNDERSTORM_WITH_SLIGHT_HAIL, "Гроза с небольшим градом"
   ],
   [
-    99,
-    {
-      name: "Гроза с градом",
-      day_img: EImages.THUNDERSTORM_WITH_HEAVY_HAIL_DAY,
-      night_img: EImages.THUNDERSTORM_WITH_HEAVY_HAIL_NIGHT,
-    },
+    EWeatherCodes.THUNDERSTORM_WITH_HEAVY_HAIL, "Гроза с градом"
   ],
 ]);

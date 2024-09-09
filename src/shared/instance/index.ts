@@ -19,4 +19,9 @@ findCityInstance.interceptors.request.use(
   }
 );
 
-export { findCityInstance };
+const weatherInstance = axios.create({
+  baseURL: "https://api.open-meteo.com/v1/forecast",
+  timeout: 5000
+})
+
+export { findCityInstance, weatherInstance };
