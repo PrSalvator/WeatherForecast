@@ -1,4 +1,3 @@
-import { Header } from "@/widgets/Header/ui";
-import { useSearchStringPresenter } from "@/widgets/Header/presenters/searchStringPresenter";
+import { Header } from "@/widgets/header/ui";
 
-export { Header, useSearchStringPresenter };
+export { Header };

@@ -1,6 +1,6 @@
 import { ICityDto } from "@/entities/city";
 import { getCurrentWeather } from "@/entities/weather/api/slice";
-import { CityListItem } from "@/features/city_list";
+import { CityListItem } from "@/entities/city";
 
 interface ICityListProps {
   data: ICityDto[];
@@ -12,16 +12,13 @@ export const CityList = ({ data }: ICityListProps) => {
   }
 
   const onClick = (data: ICityDto) => {
-    getCurrentWeather(data).then((data) => console.log(data))
-  }
+    getCurrentWeather(data).then((data) => console.log(data));
+  };
 
   return (
-    <section>
+    <section className="divide-slate-300 divide-y ">
       {data.map((city, index) => (
-        <>
-          <CityListItem data={city} key={index} onClick={onClick} />
-          <hr className="mt-1"/>
-        </>
+          <CityListItem city={city} key={index} onClick={onClick} />
       ))}
     </section>
   );

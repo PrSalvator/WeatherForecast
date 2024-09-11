@@ -1,15 +1,16 @@
 import { ICityDto } from "@/entities/city";
+import { IWeatherDto } from "@/entities/weather";
 import { WeatherIcon } from "@/shared/components/weather_icon";
-import { useRecentLocationPresenter } from "@/widgets/recent_locations/ui/recent_location/presenter";
 
 interface IRecentLocation {
   city: ICityDto;
+  weather?: IWeatherDto;
+  isPending: boolean;
 }
 
-export const RecentLocation = ({ city }: IRecentLocation) => {
-  const { isPending, data } = useRecentLocationPresenter(city);
+export const RecentLocation = ({ city, weather, isPending }: IRecentLocation) => {
 
-  if (!isPending && data)
+  if (!isPending && weather)
     return (
       <div className="font-thin p-3 flex flex-col text-white backdrop-blur-md backdrop-brightness-75 rounded-lg cursor-pointer">
         <section>
@@ -22,17 +23,17 @@ export const RecentLocation = ({ city }: IRecentLocation) => {
           <section className="flex items-stretch">
             <WeatherIcon
               className="fill-white"
-              weatherCode={data.weather_code}
-              isDay={data.is_day}
+              weatherCode={weather.weather_code}
+              isDay={weather.is_day}
               height="50px"
               width="50px"
             />
             <h1 className="text-[30px] font-normal">
-              {data.temperature}°<span className="relative text-[14px] left-[-10px] font-semibold opacity-60">C</span>
+              {Math.round(weather.temperature)}°<span className="relative text-[14px] left-[-10px] font-semibold opacity-60">C</span>
             </h1>
           </section>
         </section>
-        <p>По ощущениям {data.apparent_temperature}°</p>
+        <p>По ощущениям {Math.round(weather.apparent_temperature)}°</p>
       </div>
     );
 };

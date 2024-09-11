@@ -1,4 +1,4 @@
-import { EMinutely } from "@/shared/enum/params";
+import { EMinutely } from "@/shared/enums/params";
 
 export class GetCurrentWeatherParams {
   latitude: number = 0;

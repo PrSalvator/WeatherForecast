@@ -54,7 +54,7 @@ import ThunderstromWithSlightHailDayIcon from "@/assets/weather/thunderstorm-day
 import ThunderstromWithSlightHailNightIcon from "@/assets/weather/thunderstorm-night.svg?react";
 import ThunderstromWithHeavyHailDayIcon from "@/assets/weather/thunderstorm-day.svg?react";
 import ThunderstromWithHeavyHailNightIcon from "@/assets/weather/thunderstorm-night.svg?react";
-import { EWeatherCodes } from "@/shared/enum/images";
+import { EWeatherCodes } from "@/shared/enums/weather_codes";
 
 interface IWeatherIconProps extends React.SVGProps<SVGSVGElement> {
   weatherCode: number;

@@ -1,4 +1,4 @@
-import { Header } from "@/widgets/Header";
+import { Header } from "@/widgets/header";
 import { RecentLocations } from "@/widgets/recent_locations";
 const Main = () => {
   // if (navigator.geolocation) {

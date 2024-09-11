@@ -1,6 +1,6 @@
-import { EWeatherCodes } from "@/shared/enum/images";
+import { EWeatherCodes } from "@/shared/enums/weather_codes";
 
-export const WEATHER_CODES = new Map<EWeatherCodes, string>([
+export const WEATHER_CODE_TO_RU_MAP = new Map<EWeatherCodes, string>([
   [
     EWeatherCodes.CLEAR, "Ясно"
   ],

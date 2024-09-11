@@ -1,4 +1,4 @@
-import { ERoutes } from "@/shared/enum/routes";
+import { ERoutes } from "@/shared/enums/routes";
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
